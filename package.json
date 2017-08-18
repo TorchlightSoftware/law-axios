@@ -1,0 +1,21 @@
+{
+  "name": "law-axios",
+  "version": "1.0.0",
+  "description": "Law adapter for exposing a REST service.  Uses axios under the covers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "law",
+    "axios",
+    "rest"
+  ],
+  "author": "b@tlsft.com",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
+    "qs": "^6.5.0"
+  }
+}
