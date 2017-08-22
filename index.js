@@ -27,7 +27,7 @@ module.exports = function rest(defaults) {
 
     // if done callback, call it
     if (done) {
-      request.then((body, response) => done(null, body, response), done)
+      request.then(response => done(null, response), error => done(error, {}))
     }
 
     // return promise
