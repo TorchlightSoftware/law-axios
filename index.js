@@ -27,7 +27,18 @@ module.exports = function rest(defaults) {
 
     // if done callback, call it
     if (done) {
-      request.then(response => done(null, response), error => done(error, {}))
+      request.then(response => done(null, response), error => {
+
+        // add response data and http status code
+        error.responseData = error.response.data
+        error.statusCode = error.response.status
+
+        // remove circular nested data structures
+        delete error.request
+        delete error.response
+
+        done(error, {})
+      })
     }
 
     // return promise

@@ -1,6 +1,6 @@
 {
   "name": "law-axios",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Law adapter for exposing a REST service.  Uses axios under the covers.",
   "main": "index.js",
   "scripts": {
